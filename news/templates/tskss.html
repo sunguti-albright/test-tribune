@@ -1,0 +1,75 @@
+<!-- oh my gombotosh -->
+
+<!-- CRUD -->
+<!-- Create -->
+from news.models import Editor
+ed1 = Editor(first_name='Precious', last_name= 'Halima', email='Halima@gmail.com')
+ed1.save()
+ed1 = Editor(first_name='Precious', last_name= 'Halima', email='Halima@gmail.com')
+
+<!-- Also -->
+ed2 = Editor.objects.create(first_name='Precious', last_name= 'Halima', email='Halima@gmail.com')
+
+<!-- Read -->
+<!-- Querying the database -->
+1. all<!-- CRUD -->
+<!-- Create -->
+from news.models import Editor
+ed1 = Editor(first_name='Precious', last_name= 'Halima', email='Halima@gmail.com')
+ed1.save()
+
+<!-- Also -->
+ed2 = Editor.objects.create(first_name='Precious', last_name= 'Halima', email='Halima@gmail.com')
+
+<!-- Read -->
+<!-- Querying the database -->
+1. all
+Editor.objects.all()
+
+2. retrieving a single object
+Editor.objects.get(pk=2)
+
+3. filter data received from the database
+Editor.objects.filter(first_name='Precious', last_name='Halima')
+
+4. order data
+Editor.objects.order_by('first_name')
+
+<!-- reverse order -->
+Editor.objects.order_by('-first_name')
+
+5. slicing data
+Editor.objects.all()[:]
+
+<!-- Update -->
+Editor.objects.filter(id=1).update(first_name='Preshii')
+Editor.objects.filter(id = 1)
+
+<!-- Delete -->
+Editor.objects.filter(id = 2).delete()
+
+Editor.objects.all()
+
+2. retrieving a single object
+Editor.objects.get(pk=2)
+
+3. filter data received from the database
+Editor.objects.filter(first_name='Precious', last_name='Halima')
+
+4. order data
+Editor.objects.order_by('first_name')
+
+<!-- reverse order -->
+Editor.objects.order_by('-first_name')
+
+5. slicing data
+Editor.objects.all()[:]
+
+<!-- Update -->
+Editor.objects.filter(id=1).update(first_name='Preshii')
+Editor.objects.filter(id = 1)
+
+<!-- Delete -->
+Editor.objects.filter(id = 2).delete()
+
+

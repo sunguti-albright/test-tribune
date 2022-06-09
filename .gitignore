@@ -1,0 +1,6 @@
+env/
+.idea/
+*.sh
+.env
+.vscode/
+Makefile
